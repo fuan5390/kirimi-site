@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Authorization - KIRIMI Channel</title><link rel="stylesheet" href="style.css"></head><body>
+<h1>Authorization received</h1>
+<p>Copy the code below and paste it into the terminal when asked. This page does not send it anywhere.</p>
+<p><code id="code">(no code in the address)</code></p>
+<script>
+var p = new URLSearchParams(location.search);
+document.getElementById('code').textContent = p.get('code') || p.get('error_description') || '(no code in the address)';
+</script>
+</body></html>
